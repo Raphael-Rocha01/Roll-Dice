@@ -1,39 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:roll_dice/roll_dice_page.dart';
 
 void main() {
   runApp(
     const MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Teste(),
+        body: RollDicePage(),
       ),
     ),
   );
-}
-
-class Teste extends StatelessWidget {
-  const Teste({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [
-            Color.fromARGB(255, 26, 2, 80),
-            Color.fromARGB(255, 45, 7, 98),
-          ],
-        ),
-      ),
-      child: const Center(
-        child: Text(
-          "Hello World",
-          style: TextStyle(color: Colors.white, fontSize: 28),
-        ),
-      ),
-    );
-  }
 }
